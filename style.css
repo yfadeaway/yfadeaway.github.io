@@ -8,7 +8,6 @@ body{
     margin: 0px;
     padding: 10px;
     font-family: "Fredoka One", sans-serif;
-    box-shadow: 8px 8px 10px 3px darkblue;
     width: 17%;
     text-shadow:
     1px 1px 0px black,
@@ -27,6 +26,19 @@ ul {
 body > header{
     background-color: rgb(127, 189, 255);
     color: white;
+    display: flex;
+    height: 18vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#nav-ul {
+    display: flex;
+}
+
+#nav-ul > li {
+    padding: 8px;
+    margin: 16px;
 }
 
 body > header > nav > ul{
@@ -37,12 +49,25 @@ body > header > nav > ul{
 .navbutton{
     color: white;
     text-decoration: none;
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 10%;
 }
 
-body > main > article {
+body > main article {
     width: 70%;
     margin: auto;
 }
+
+#main-content{
+    display: flex;
+    justify-content: space-around;
+}
+
+#main-content > div {
+    width: 85%;
+}
+
 
 form {
     text-align: center;
@@ -54,8 +79,70 @@ h2 {
 
 body > footer {
     background-color: rgb(127, 189, 255);
+    display: flex;
+}
+
+#footer-ul{
+    display: flex;
+    list-style: none;
+}
+#footer-ul > div > li {
+    margin-left: 12px;
+}
+
+#footer-ul > div > li > a{
+    color: white;
+    text-decoration: none; 
 }
 
 img {
     border-radius: 50%;
+}
+body {
+    margin: 0;
+}
+
+header {
+    padding: 16px;
+  background-color: rgb(127, 189, 255);
+  color: white;
+  text-align: center;
+  grid-area: header;
+}
+
+#menu {
+    padding: 32px;
+    background-color: rgb(88, 131, 177);
+    grid-area: menu;
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+#main-content {
+    padding: 32px;
+    grid-area: main;
+}
+
+footer {
+    padding: 16px;
+    background-color: rgb(127, 189, 255);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    grid-area: footer;
+}
+
+#grid-container{
+    display: grid;
+   grid-template-areas:
+   "header header"
+   "menu main"
+   "footer footer"
+   ;
+   grid-template-columns: 1fr 6fr;
 }
